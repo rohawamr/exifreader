@@ -1,11 +1,16 @@
 import exifread
-import json
-# Open image file for reading (binary mode)
+from flask import Flask
+exifreader = Flask(__name__)
 
-filepath = raw_input("Enter file name\n")
-f = open(filepath, 'rb')
+@exifreader.route("/")
+def exif_func():
+    filepath = raw_input("Enter file name: \n")
+    f = open(filepath, 'rb')
 
-# Return Exif tags
-tags = exifread.process_file(f,details=False)
+    # Return Exif tags
+    tags = exifread.process_file(f,details=False)
+    print tags
+    return tags
 
-print json.dumps(dict(tags))
+if __name__ == "__main__":
+    exifreader.run()
