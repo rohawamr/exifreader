@@ -1,8 +1,8 @@
 import exifread
 from flask import Flask
-exifreader = Flask(__name__)
+exifr = Flask(__name__)
 
-@exifreader.route("/")
+@exifr.route("/")
 def exif_func():
     filepath = raw_input("Enter file name: \n")
     f = open(filepath, 'rb')
@@ -13,4 +13,4 @@ def exif_func():
     return tags
 
 if __name__ == "__main__":
-    exifreader.run()
+    exifr.run()
