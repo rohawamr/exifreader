@@ -10,7 +10,7 @@ def exif_func():
     # Return Exif tags
     tags = exifread.process_file(f,details=False)
     print tags
-    return tags
+    return "Hello world..!!"
 
 if __name__ == "__main__":
     exifr.run()
