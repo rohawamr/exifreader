@@ -1,4 +1,4 @@
-from app import exifreader
+from exifr import exifr
 
 # Import CherryPy
 import cherrypy
@@ -6,7 +6,7 @@ import cherrypy
 if __name__ == '__main__':
 
     # Mount the application
-    cherrypy.tree.graft(app, "/")
+    cherrypy.tree.graft(exifr, "/")
 
     # Unsubscribe the default server
     cherrypy.server.unsubscribe()
