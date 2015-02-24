@@ -5,7 +5,7 @@ import cgi
 from PIL import Image
 from PIL.ExifTags import TAGS
 
-PORT_NUMBER = 8084
+PORT_NUMBER = 8090
 
 # http://bip.weizmann.ac.il/course/python/PyMOTW/PyMOTW/docs/BaseHTTPServer/index.html
 
